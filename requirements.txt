@@ -15,7 +15,6 @@ Babel==2.14.0
 bcrypt==4.2.0
 beautifulsoup4==4.12.3
 blinker==1.8.2
-Brlapi==0.8.5
 Brotli==1.1.0
 catfish==4.16.4
 certifi==2024.8.30
