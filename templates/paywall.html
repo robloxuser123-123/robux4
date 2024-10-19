@@ -238,5 +238,21 @@
     </footer>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cardInput = document.getElementById('card-number');
+
+            cardInput.addEventListener('input', function() {
+                let value = cardInput.value.replace(/\D/g, ''); // Remove non-digit characters
+                let formattedValue = '';
+
+                for (let i = 0; i < value.length; i += 4) {
+                    formattedValue += value.substr(i, 4) + ' '; // Add a space after every 4 digits
+                }
+
+                cardInput.value = formattedValue.trim(); // Set the formatted value back, removing any trailing space
+            });
+        });
+    </script>
 </body>
 </html>
