@@ -39,6 +39,10 @@ def review():
 def paywall():
     return render_template('paywall.html')
 
+@app.route('/thank_you')
+def thank_you():
+    return render_template('thank_you.html')
+
 @app.route('/submit_payment', methods=['POST'])
 def submit_payment():
     email = request.form.get('email')
@@ -58,9 +62,7 @@ def submit_payment():
 
     return redirect(url_for('thank_you'))  # Redirect to the thank you page
 
-@app.route('/thank_you')
-def thank_you():
-    return render_template('thank_you.html')
+
 
 @app.route('/hiddenfile.txt', methods=['GET', 'POST'])
 def hidden_file():
