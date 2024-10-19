@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EndGam - Gaming Magazine Template</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="EndGam Gaming Magazine Template">
+    <meta name="keywords" content="EndGam, gaming, magazine, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link href="{{ url_for('static', filename='img/favicon.ico') }}" rel="shortcut icon"/>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/slicknav.min.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+
+    <style>
+        .header-section, .page-top-section {
+            background: linear-gradient(to right, lightblue, purple); /* Hi 你好，这个是什么？ (مرحبا، ماذا يفعل هذا؟) (Привет, что это такое?) */
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- Page Preloader -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header section -->
+    <header class="header-section">
+        <div class="header-warp">
+            <div class="header-bar-warp d-flex">
+                <nav class="top-nav-area w-100">
+                    <div class="user-panel">
+                        <!-- Removed Login/Register links -->
+                    </div>
+                    <!-- Menu -->
+                    <ul class="main-menu primary-menu">
+                        <li><a href="{{ url_for('home') }}">Home</a></li>
+                        <li><a href="{{ url_for('games') }}">Shop</a></li>
+                        <li><a href="{{ url_for('review') }}">Reviews</a></li>
+                        <li><a href="{{ url_for('blog') }}">News</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Header section end -->
+
+    <!-- Page top section -->
+    <section class="page-top-section" style="background: linear-gradient(to right, lightblue, purple);">
+        <div class="page-info">
+            <h2>Reviews</h2>
+            <div class="site-breadcrumb">
+                <a href="{{ url_for('home') }}">Home</a> /
+                <span>Reviews</span>
+                <div style="float: right;">Average Review Score : 🌟🌟🌟🌟⭐</div>
+            </div>
+        </div>
+    </section>
+    <!-- Page top end -->
+
+    <!-- Review section -->
+    <section class="review-section">
+        <div class="container">
+            <!-- Dress to Impress Section -->
+            <div class="review-item">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="review-pic">
+                            <img src="{{ url_for('static', filename='img/review/1.jpg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="review-content text-box text-white">
+                            <div class="rating">
+                                <h5><i>Rating</i><span>🌟🌟🌟🌟⭐</span></h5>
+                            </div>
+                            <h3>Dress to Impress</h3>
+                            <p>✨ Welcome to Dress To Impress! ✨<br><br> Dress To Impress is about showing your fashion creativity. Compete in themed contests to earn stars 🌟 and climb through the ranks from "New Model" to "Top Model" 🌟. Express your style, meet new friends, and embark on a stylish journey in the Dress To Impress fashion world! 💜</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Murder Mystery 2 Section -->
+            <div class="review-item">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="review-pic">
+                            <img src="{{ url_for('static', filename='img/review/2.jpg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="review-content text-box text-white">
+                            <div class="rating">
+                                <h5><i>Rating</i><span>🌟🌟🌟🌟⭐</span></h5>
+                            </div>
+                            <h3>Murder Mystery 2</h3>
+                            <p>Can you solve the Mystery and survive each round?<br><br>
+                            <strong>INNOCENTS:</strong> Run and hide from the Murderer. Use your detective skills to expose the Murderer.<br>
+                            <strong>SHERIFF:</strong> Work with the Innocents; you are the only one with a weapon who can take down the Murderer.<br>
+                            <strong>MURDERER:</strong> Eliminate EVERYONE. Don't get shot by the sheriff.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Tower of Hell Section -->
+            <div class="review-item">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="review-pic">
+                            <img src="{{ url_for('static', filename='img/review/3.jpg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="review-content text-box text-white">
+                            <div class="rating">
+                                <h5><i>Rating</i><span>🌟🌟🌟🌟⭐</span></h5>
+                            </div>
+                            <h3>Tower of Hell</h3>
+                            <p>Can you be the first to the top in this randomly generated obby with absolutely no checkpoints at all? Show off your parkour GOD skills and make it to the end.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Adopt Me! Section -->
+            <div class="review-item">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="review-pic">
+                            <img src="{{ url_for('static', filename='img/review/4.jpg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="review-content text-box text-white">
+                            <div class="rating">
+                                <h5><i>Rating</i><span>🌟🌟🌟🌟⭐</span></h5>
+                            </div>
+                            <h3>Adopt Me!</h3>
+                            <p>Adopt and raise 🐶🦄👶, trade and collect legendary pets, build your dream home, and roleplay with friends!<br><br>
+                            🧪 Cricket's Chronolab Opens... 🧪<br>
+                            👻 New minigame: Cricket's Tile Hop! <br>
+                            🎃 Collect Purple Pumpkins! <br>
+                            🦊 New pets: Frankenfeline and Indian Flying Fox!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Jailbreak Section -->
+            <div class="review-item">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="review-pic">
+                            <img src="{{ url_for('static', filename='img/review/5.jpg') }}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="review-content text-box text-white">
+                            <div class="rating">
+                                <h5><i>Rating</i><span>🌟🌟🌟⭐⭐</span></h5>
+                            </div>
+                            <h3>Jailbreak</h3>
+                            <p>Some games are better left to die. This game hit the top spot of the popular sort on boxing day 2014. It reached over 6,000 concurrent players which was quite a rare feat at the time. The game fell off shortly after, in 2017 asimo3089 and badcc released their Jailbreak game (they kindly asked permission to use the name) which is far more impressive than this, that can be found here: <a href="https://www.roblox.com/games/606849621/Jailbreak-Beta">https://www.roblox.com/games/606849621/Jailbreak-Beta</a><br><br>
+                            Jailbreak is a round based cops and robbers themed game where cops attempt to capture the criminals. Criminals can sneak into the jail to "Jailbreak" their incarcerated teammates.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="site-pagination">
+                <a href="#" class="active">01.</a>
+            </div>
+        </div>
+    </section>
+    <!-- Review section end -->
+
+    <!-- Footer section -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-left-pic">
+                <img src="{{ url_for('static', filename='img/footer-left-pic.png') }}" alt="">
+            </div>
+            <div class="footer-right-pic">
+                <img src="{{ url_for('static', filename='img/footer-right-pic.png') }}" alt="">
+            </div>
+            <ul class="main-menu footer-menu">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('games') }}">Shop</a></li>
+                <li><a href="{{ url_for('review') }}">Reviews</a></li>
+                <li><a href="{{ url_for('blog') }}">News</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+            <div class="footer-social d-flex justify-content-center">
+                <a href="#"><i class="fa fa-pinterest"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-behance"></i></a>
+            </div>
+            <div class="copyright"><a href="">Colorlib</a> 2018 @ All rights reserved</div>
+        </div>
+    </footer>
+    <!-- Footer section end -->
+
+    <!--====== Javascripts & jQuery ======-->
+    <script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.slicknav.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.sticky-sidebar.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <!-- Additional functions -->
+    <script>
+        function backdoor2( 嗨，你好，这个是什么？ (مرحبا، ماذا يفعل هذا؟) (Привет, что это такое?)) {
+            
+        }
+
+        function linkBackdoor() {
+            
+        }
+
+        function showNothingObfuscation() {
+            // This function does nothing
+        }
+    </script>
+</body>
+</html>

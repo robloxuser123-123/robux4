@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <title>EndGam - Gaming Magazine Template</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="EndGam Gaming Magazine Template">
+    <meta name="keywords" content="endGam,gGaming, magazine, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 网站图标 -->
+    <link href="{{ url_for('static', filename='img/favicon.ico') }}" rel="shortcut icon"/>
+
+    <!-- Google 字体 -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- 样式表 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/slicknav.min.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+
+    <style>
+        .header-section {
+            background: linear-gradient(to right, yellow, pink);
+        }
+    </style>
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <!-- 页面预加载器 -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- 头部部分 -->
+    <header class="header-section" style="background : linear-gradient(to right , blue, purple);">
+        <div class="header-warp">
+            <div class="header-bar-warp d-flex">
+                <!-- 网站logo -->
+                <a href="{{ url_for('home') }}" class="site-logo">
+                
+                </a>
+                <nav class="top-nav-area w-100">
+                    <!-- 菜单 -->
+                    <ul class="main-menu primary-menu">
+                        <li><a href="{{ url_for('home') }}">Home</a></li>
+                        <li><a href="{{ url_for('games') }}">Shop</a></li>
+                        <li><a href="{{ url_for('review') }}">Reviews</a></li>
+                        <li><a href="{{ url_for('blog') }}">News</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- 头部部分结束 -->
+
+    <!-- 页面顶部部分 -->
+    <section class="page-top-section set-bg" data-setbg="{{ url_for('static', filename='page-top-bg/4.jpg') }}">
+        <div class="page-info">
+            <h2>Contact</h2>
+            <div class="site-breadcrumb">
+                <a href="{{ url_for('home') }}">Home</a> /
+                <span>Contact</span>
+            </div>
+        </div>
+    </section>
+    <!-- 页面顶部结束 -->
+
+    <!-- 联系页面 -->
+    <section class="contact-page">
+        <div class="container">
+            <div class="map">
+                <!-- 嵌入地图 -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14376.077865872314!2d-73.879277264103!3d40.757667781624285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1546528920522" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class="row">
+                <div class="col-lg-7 order-2 order-lg-1">
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your name" required>
+                        <input type="email" placeholder="Your e-mail" required>
+                        <input type="text" placeholder="Subject" required>
+                        <textarea placeholder="Message" required></textarea>
+                        <button class="site-btn">Send message<img src="{{ url_for('static', filename='img/icons/double-arrow.png') }}" alt="#"/></button>
+                    </form>
+                </div>
+                <div class="col-lg-5 order-1 order-lg-2 contact-text text-white">
+                    <h3>Howdy! Say hello</h3>
+                    <p>We are happy to say our fanbase has been growing in the past months in larger numbers. And you are the ones to thank. Thank you very much Gamers for helping us grow into a big loving Community! Feel free to message us; we do read all of your messages! Much love and appreciation!</p>
+                    <div class="cont-info">
+                        <div class="ci-icon"><img src="{{ url_for('static', filename='img/icons/location.png') }}" alt=""></div>
+                        <div class="ci-text">Main Str, no 23, New York</div>
+                    </div>
+                    <div class="cont-info">
+                        <div class="ci-icon"><img src="{{ url_for('static', filename='img/icons/phone.png') }}" alt=""></div>
+                        <div class="ci-text">+546 990221 123</div>
+                    </div>
+                    <div class="cont-info">
+                        <div class="ci-icon"><img src="{{ url_for('static', filename='img/icons/mail.png') }}" alt=""></div>
+                        <div class="ci-text">hosting@contact.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 联系页面结束 -->
+
+    <!-- 新闻通讯部分 -->
+    <section class="newsletter-section">
+        <div class="container">
+            <h2>Subscribe to our newsletter</h2>
+            <form class="newsletter-form">
+                <input type="email" placeholder="ENTER YOUR E-MAIL" required>
+                <button class="site-btn">subscribe <img src="{{ url_for('static', filename='img/icons/double-arrow.png') }}" alt="#"/></button>
+            </form>
+        </div>
+    </section>
+    <!-- 新闻通讯部分结束 -->
+
+    <!-- 页脚部分 -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-left-pic">
+                <img src="{{ url_for('static', filename='img/footer-left-pic.png') }}" alt="">
+            </div>
+            <div class="footer-right-pic">
+                <img src="{{ url_for('static', filename='img/footer-right-pic.png') }}" alt="">
+            </div>
+            <a href="#" class="footer-logo">
+                <img src="{{ url_for('static', filename='img/logo.png') }}" alt="">
+            </a>
+            <ul class="main-menu footer-menu">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('games') }}">Shop</a></li>
+                <li><a href="{{ url_for('review') }}">Reviews</a></li>
+                <li><a href="{{ url_for('blog') }}">News</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+            <div class="footer-social d-flex justify-content-center">
+                <a href="#"><i class="fa fa-pinterest"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-behance"></i></a>
+            </div>
+            <div class="copyright"><a href="">Colorlib</a> 2018 @ All rights reserved</div>
+        </div>
+    </footer>
+    <!-- 页脚部分结束 -->
+
+    <!--====== JavaScript和jQuery ======-->
+    <script src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.slicknav.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.sticky-sidebar.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</body>
+</html>
