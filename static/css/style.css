@@ -1573,7 +1573,7 @@ ol {
 		margin-right: 10px;
 	}
 	.hero-item h2 {
-		font-size: 80px; /* Adjusted for better readability */
+		font-size: 60px; /* Adjusted for better readability */
 	}
 	.hero-item p {
 		font-size: 18px; /* Smaller font size */
@@ -1650,7 +1650,7 @@ ol {
 		color: #fff;
 	}
 	.hero-item h2 {
-		font-size: 60px; /* Adjusted size for mobile */
+		font-size: 50px; /* Adjusted size for mobile */
 	}
 	.hero-item p {
 		font-size: 16px;
@@ -1690,7 +1690,7 @@ ol {
 		width: 100%;
 	}
 	.featured-box .text-box h3 {
-		font-size: 40px; /* Adjusted font size */
+		font-size: 30px; /* Adjusted font size */
 	}
 	.newsletter-form {
 		padding-left: 0;
@@ -1714,7 +1714,7 @@ ol {
 		margin-bottom: 5px;
 	}
 	.game-single-content .gs-title {
-		font-size: 36px; /* Adjusted font size */
+		font-size: 30px; /* Adjusted font size */
 	}
 	.review-pic img {
 		min-width: 100%;
@@ -1736,31 +1736,32 @@ ol {
 /* Small Mobile :320px. */
 @media only screen and (max-width: 479px) {
 	.hero-item h2 {
-		font-size: 40px; /* Adjusted size for very small screens */
-		margin-bottom: 20px;
+		font-size: 30px; /* Adjusted size for very small screens */
+		margin-bottom: 10px;
 	}
 	.hero-item p {
-		font-size: 14px;
+		font-size: 12px;
 	}
 	.video-text h2 {
-		font-size: 28px;
+		font-size: 24px;
 	}
 	.video-play-btn {
 		top: calc(30% - 61px);
 	}
 	.featured-box {
-		padding: 50px 15px; /* Reduced padding */
+		padding: 30px 10px; /* Reduced padding */
 	}
 	.featured-box .text-box h3,
 	.newsletter-section h2 {
-		font-size: 30px; /* Adjusted size */
+		font-size: 25px; /* Adjusted size */
 	}
 	.main-menu li a {
 		margin-right: 15px; /* Adjusted margin */
 	}
 	.game-author-pic {
 		float: none;
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 	}
 }
+
 
