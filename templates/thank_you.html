@@ -12,9 +12,14 @@
             text-align: center;
             font-family: Arial, sans-serif;
             color: gold; /* Text color */
+            height: 100vh; /* Full height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
         }
         .thank-you-message {
-            margin-top: 50px;
+            margin-top: 20px; /* Adjust top margin */
             font-size: 24px; /* Adjust font size */
         }
         .home-button {
@@ -25,7 +30,7 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
-            margin-top: 20px;
+            margin-top: 40px; /* Space above the button */
         }
         .home-button:hover {
             background-color: darkviolet; /* Darker shade on hover */
@@ -37,9 +42,9 @@
         <h1>Thank You for Supporting Us!!!</h1>
         <p>We will be sending you the Giftcard via your email address!</p>
         <p>Please do check your email inbox or spam folder!</p>
-        <a href="{{ url_for('home') }}">
-            <button class="home-button">Home</button>
-        </a>
     </div>
+    <a href="{{ url_for('home') }}">
+        <button class="home-button">Home</button>
+    </a>
 </body>
 </html>
