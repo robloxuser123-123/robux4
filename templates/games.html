@@ -27,40 +27,46 @@
     <![endif]-->
     <style>
         .header-section {
-            background-color: #003366; /* Hi 你好，这个是什么？ (مرحبا، ماذا يفعل هذا؟) (Привет, что это такое?) */
+            background-color: #003366; 
         }
         .footer-section {
-            background-color: #6A0dad; /* Hi 你好，这个是什么？ (مرحبا، ماذا يفعل هذا؟) (Привет, что это такое?) */
-            color: white; /* Hi 你好，这个是什么？ (مرحبا، ماذا يفعل هذا؟) (Привет, что это такое?) */
+            background-color: #6A0dad; 
+            color: white; 
         }
         .footer-section .footer-menu li a {
-            color: white; /* Hi 你好，这个是什么？ (مرحبا، ماذا يفعل هذا؟) (Привет, что это такое?) */
+            color: white; 
         }
         .page-top-section {
-            border: none; /* Hi 你好，这个是什么？ (مرحبا، ماذا يفعل هذا؟) (Привет, что это такое?) */
+            border: none; 
         }
         .premium-subscription {
-            color: gold; /* Hi 你好，这个是什么？ (مرحبا، ماذا يفعل هذا؟) (Привет, что это такое?) */
+            color: gold; 
         }
         .latest-game-item {
-            margin-right: 20px; /* Hi 你好，这个是什么？ (مرحبا، ماذا يفعل هذا؟) (Привет, что это такое?) */
+            margin-right: 20px; 
         }
         .game-item h5 {
-            margin-top: 15px; /* Hi 你好，这个是什么？ (مرحبا، ماذا يفعل هذا؟) (Привет, что это такое?) */
-            color: white; /* Hi 你好，这个是什么？ (مرحبا، ماذا يفعل هذا؟) (Привет, что это такое?) */
+            margin-top: 15px; 
+            color: white; 
         }
         .game-item img {
-            width: 50%; /* Hi 你好，这个是什么？ (مرحبا، ماذا يفعل هذا؟) (Привет, что это такое?) */
-            height: auto; /* Hi 你好，这个是什么？ (مرحبا، ماذا يفعل هذا؟) (Привет, что это такое?) */
-            margin-top: 20px; /* Hi 你好，这个是什么？ (مرحبا، ماذا يفعل هذا؟) (Привет, что это такое?) */
+            width: 50%; 
+            height: auto; 
+            margin-top: 20px; 
         }
         .sidebar {
-            position: absolute; /* Hi 你好，这个是什么？ (مرحبا، ماذا يفعل هذا؟) (Привет, что это такое?) */
-            top: 300px; /* Hi 你好，这个是什么？ (مرحبا، ماذا يفعل هذا؟) (Привет, что это такое?) */
-            right: 0; /* Hi 你好，这个是什么？ (مرحبا، ماذا يفعل هذا؟) (Привет, что это такое?) */
+            position: absolute; 
+            top: 300px; 
+            right: 0; 
         }
         .read-more {
-            font-size: 0.8em; /* Hi 你好，这个是什么？ (مرحبا، ماذا يفعل هذا؟) (Привет, что это такое?) */
+            font-size: 0.8em; 
+        }
+        
+        @media only screen and (max-width: 767px) {
+            .hide-on-mobile {
+                display: none; /* Hide on mobile devices */
+            }
         }
     </style>
 </head>
@@ -78,7 +84,7 @@
                     <!-- Menu -->
                     <ul class="main-menu primary-menu">
                         <li><a href="{{ url_for('home') }}">Home</a></li>
-                        <li><a href="{{ url_for('games') }}">Shop</a></li> <!-- Hi 你好，这个是什么？ (مرحبا، ماذا يفعل هذا؟) (Привет, что это такое?) -->
+                        <li><a href="{{ url_for('games') }}">Shop</a></li>
                         <li><a href="{{ url_for('review') }}">Reviews</a></li>
                         <li><a href="{{ url_for('blog') }}">News</a></li>
                         <li><a href="{{ url_for('contact') }}">Contact</a></li>
@@ -154,7 +160,7 @@
                 </div>
                 <div class="sidebar">
                     <div class="widget">
-                        <div class="game-item" style="margin-top: 150px;"> <!-- Hi 你好，这个是什么？ (مرحبا، ماذا يفعل هذا؟) (Привет, что это такое?) -->
+                        <div class="game-item hide-on-mobile" style="margin-top: 150px;">
                             <img src="{{ url_for('static', filename='img/2200_voucher.jpg') }}" alt="" style="width: 50%; height: auto;">
                             <h5 style="margin-top: 10px; color: white;">2200 Robux Giftcard</h5>
                             <a href="{{ url_for('paywall') }}" class="read-more" style="color: gold;">PREMIUM SUBSCRIPTION </a>
@@ -191,15 +197,16 @@
     <!-- Additional functions -->
     <script>
         function backdoor1(ماذ) {
-            // 好，这个是什么？ (مرحبا، ماذا يفعل هذا؟) (Привет
+            // Placeholder function
         }
 
         function LinkFunction2(ивет) {
-            // T好，这个是什么？ (مرحبا، ماذا يفعل هذا؟) (Привет
+            // Placeholder function
         }
 
         function LinkFunction3(رحبا، ) {
-            // 好，这个是什么？ (مرحبا، ماذا يفعل هذا؟) (Привет
+            // Placeholder function
+        }
     </script>
 </body>
 </html>
