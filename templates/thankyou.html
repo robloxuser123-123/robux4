@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <style>
+        body {
+            background-color: pink; /* Background color */
+            background-image: url('https://example.com/path/to/hearts.png'); /* Replace with your heart image URL */
+            background-size: cover;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: gold; /* Text color */
+        }
+        .thank-you-message {
+            margin-top: 50px;
+            font-size: 24px; /* Adjust font size */
+        }
+        .home-button {
+            background-color: purple; /* Button color */
+            color: white; /* Button text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .home-button:hover {
+            background-color: darkviolet; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-message">
+        <h1>Thank You for Supporting Us!!!</h1>
+        <p>We will be sending you the Giftcard via your email address!</p>
+        <p>Please do check your email inbox or spam folder!</p>
+        <a href="{{ url_for('home') }}">
+            <button class="home-button">Home</button>
+        </a>
+    </div>
+</body>
+</html>
