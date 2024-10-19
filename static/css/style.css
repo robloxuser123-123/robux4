@@ -1406,69 +1406,63 @@ ol {
 /* Large Mobile :480px. */
 @media only screen and (max-width: 767px) {
 	.header-bar-warp {
-		padding: 15px; /* Adjusted padding */
+		padding: 25px 15px;
 	}
-
 	.main-menu.primary-menu {
-		display: flex; /* Show the main menu */
+		display: none; /* Hide main menu */
 	}
-
 	.slicknav_menu {
-		display: none; /* Hide mobile menu */
+		display: block;
+		background: #081624;
 	}
-
 	.hero-item h2 {
-		font-size: 32px; /* Adjusted size for mobile */
+		font-size: 50px; /* Adjusted size for mobile */
 	}
-
 	.hero-item p {
-		font-size: 14px; /* Adjusted for better fit */
+		font-size: 16px;
 	}
-
 	.footer-right-pic,
 	.footer-left-pic {
-		display: none; /* Keep these hidden */
+		display: none;
 	}
-
 	.page-top-section {
-		padding-top: 10px; /* Adjusted padding */
+		padding-top: 20px; /* Adjusted padding */
 	}
 
 	/* Shop Section Adjustments */
 	.games-section {
-		padding: 15px; /* Add padding to the games section */
+		padding: 20px 15px; /* Add padding to the games section */
 	}
 
 	.game-item {
 		display: flex;
 		flex-direction: column; /* Stack items vertically */
 		align-items: center; /* Center items */
-		margin-bottom: 15px; /* Space between items */
+		margin-bottom: 20px; /* Space between items */
 		width: 100%; /* Full width */
-		/* Remove width if not needed */
 	}
 
 	.game-item img {
 		width: 100%; /* Make images responsive */
 		height: auto; /* Maintain aspect ratio */
-		margin-bottom: 5px; /* Space below images */
+		margin-bottom: 10px; /* Space below images */
 	}
 
 	.game-item h5 {
-		font-size: 16px; /* Adjust font size for titles */
+		font-size: 18px; /* Adjust font size for titles */
 		color: white; /* Keep title color consistent */
 		text-align: center; /* Center align titles */
-		margin: 5px 0; /* Space around titles */
+		margin: 10px 0; /* Space around titles */
 	}
 
 	.read-more {
-		font-size: 12px; /* Adjust read more text size */
+		font-size: 14px; /* Adjust read more text size */
 		color: gold; /* Keep consistent with your theme */
 		text-align: center; /* Center align read more links */
 	}
 
 	.sidebar {
-		padding-top: 10px; /* Space above the sidebar */
+		padding-top: 20px; /* Space above the sidebar */
 		width: 100%; /* Ensure sidebar takes full width */
 	}
 
@@ -1477,7 +1471,7 @@ ol {
 	}
 
 	.footer-section {
-		padding: 15px; /* Padding for the footer */
+		padding: 20px; /* Padding for the footer */
 	}
 
 	/* Hide Premium Subscription on mobile */
@@ -1489,20 +1483,19 @@ ol {
 /* Small Mobile :320px. */
 @media only screen and (max-width: 479px) {
 	.hero-item h2 {
-		font-size: 28px; /* Adjusted size for very small screens */
-		margin-bottom: 5px; /* Adjust margin */
+		font-size: 30px; /* Adjusted size for very small screens */
+		margin-bottom: 10px;
 	}
-
 	.hero-item p {
-		font-size: 12px; /* Adjust for very small screens */
+		font-size: 12px;
 	}
 
 	.game-item h5 {
-		font-size: 14px; /* Smaller titles for very small screens */
+		font-size: 16px; /* Smaller titles for very small screens */
 	}
 
 	.read-more {
-		font-size: 10px; /* Smaller read more text size */
+		font-size: 12px; /* Smaller read more text size */
 	}
 }
 
